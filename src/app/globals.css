@@ -4,6 +4,100 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* =========================================================
+   🎨 CAMPUSHUB DESIGN SYSTEM (Tailwind v4)
+========================================================= */
+
+@theme {
+  /* =========================
+     Campus Blue
+  ========================== */
+  --color-campus-blue: #0038BC;
+  --color-campus-blue-light: #93B2F8;
+
+  --color-campus-blue-50: #F0F5FF;
+  --color-campus-blue-100: #E0EBFF;
+  --color-campus-blue-200: #C7DBFF;
+  --color-campus-blue-300: #93B2F8;
+  --color-campus-blue-400: #6B95F5;
+  --color-campus-blue-500: #0038BC;
+  --color-campus-blue-600: #002A8F;
+  --color-campus-blue-700: #001F6B;
+  --color-campus-blue-800: #001548;
+  --color-campus-blue-900: #000B24;
+
+  /* =========================
+     Campus Orange
+  ========================== */
+  --color-campus-orange: #EF8F00;
+
+  --color-campus-orange-50: #FFF7E6;
+  --color-campus-orange-100: #FFEFD0;
+  --color-campus-orange-200: #FFDFA1;
+  --color-campus-orange-300: #FFCF72;
+  --color-campus-orange-400: #FFBF43;
+  --color-campus-orange-500: #EF8F00;
+  --color-campus-orange-600: #C07300;
+  --color-campus-orange-700: #915700;
+  --color-campus-orange-800: #623B00;
+  --color-campus-orange-900: #331F00;
+
+  /* =========================
+     Campus Gray
+  ========================== */
+  --color-campus-gray: #EEEEEE;
+
+  --color-campus-gray-50: #FAFAFA;
+  --color-campus-gray-100: #F5F5F5;
+  --color-campus-gray-200: #EEEEEE;
+  --color-campus-gray-300: #E0E0E0;
+  --color-campus-gray-400: #BDBDBD;
+  --color-campus-gray-500: #9E9E9E;
+  --color-campus-gray-600: #757575;
+  --color-campus-gray-700: #616161;
+  --color-campus-gray-800: #424242;
+  --color-campus-gray-900: #212121;
+
+  /* =========================
+     Semantic Tokens (Recommended)
+  ========================== */
+  --color-primary: #0038BC;
+  --color-primary-foreground: #FFFFFF;
+
+  --color-secondary: #93B2F8;
+  --color-secondary-foreground: #001548;
+
+  --color-accent: #EF8F00;
+  --color-accent-foreground: #FFFFFF;
+
+  --color-muted: #EEEEEE;
+  --color-muted-foreground: #616161;
+
+  --color-destructive: #DC2626;
+  --color-destructive-foreground: #FFFFFF;
+
+  --color-background: #FFFFFF;
+  --color-foreground: #212121;
+
+  --color-card: #FFFFFF;
+  --color-card-foreground: #212121;
+
+  --color-popover: #FFFFFF;
+  --color-popover-foreground: #212121;
+
+  --color-ring: #0038BC;
+}
+
+/* =========================================================
+   📦 Border Radius Tokens
+========================================================= */
+
+:root {
+  --radius-lg: 0.5rem;
+  --radius-md: calc(0.5rem - 2px);
+  --radius-sm: calc(0.5rem - 4px);
+}
+
 /* :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -29,7 +123,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 } */
 
-@theme inline {
+/* @theme inline {
 
     --radius-sm: calc(var(--radius) - 4px);
 
@@ -106,9 +200,9 @@ body {
     --color-sidebar-border: var(--sidebar-border);
 
     --color-sidebar-ring: var(--sidebar-ring);
-}
+} */
 
-:root {
+/* :root {
 
     --radius: 0.625rem;
 
@@ -238,13 +332,13 @@ body {
     --sidebar-border: oklch(1 0 0 / 10%);
 
     --sidebar-ring: oklch(0.556 0 0);
-}
+} */
 
-@layer base {
+/* @layer base {
   * {
     @apply border-border outline-ring/50;
     }
   body {
     @apply bg-background text-foreground;
     }
-}
+} */
