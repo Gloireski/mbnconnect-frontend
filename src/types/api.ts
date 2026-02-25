@@ -66,3 +66,29 @@ export interface PaginatedResponse<T> {
     next: string | null;
   };
 }
+
+export interface Invitation {
+  id: string;
+  email: string;
+  role: UserRole;
+  token: string;
+  expires_at: string;
+  used: boolean;
+  used_at: string | null;
+  invited_by: number | null;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface VerifyInvitationResponse {
+  email: string;
+  role: UserRole;
+}
+
+export interface RegisterWithInvitationRequest {
+  name: string;
+  email: string;
+  password: string;
+  password_confirmation: string;
+  invitation_token: string;
+}

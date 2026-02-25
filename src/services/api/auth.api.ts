@@ -1,6 +1,6 @@
 // src/services/api/auth.api.ts
 import axios from '@/lib/axios';
-import { AuthResponse, LoginRequest, RegisterRequest, User } from '@/types/api';
+import { AuthResponse, LoginRequest, RegisterRequest, RegisterWithInvitationRequest, User } from '@/types/api';
 
 // ✅ Récupérer le CSRF token avant les mutations
 const getCsrfToken = async () => {
@@ -11,11 +11,16 @@ const getCsrfToken = async () => {
 
 export const authApi = {
   // Register
-  register: async (data: RegisterRequest): Promise<AuthResponse> => {
-    await getCsrfToken(); // ✅ Obtenir CSRF token d'abord
+  register: async (data: RegisterWithInvitationRequest): Promise<AuthResponse> => {
+    await getCsrfToken();
     const response = await axios.post<AuthResponse>('/register', data);
     return response.data;
   },
+  // register: async (data: RegisterRequest): Promise<AuthResponse> => {
+  //   await getCsrfToken(); // ✅ Obtenir CSRF token d'abord
+  //   const response = await axios.post<AuthResponse>('/register', data);
+  //   return response.data;
+  // },
 
   // Login
   login: async (data: LoginRequest): Promise<AuthResponse> => {
