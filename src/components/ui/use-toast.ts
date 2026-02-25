@@ -1,0 +1,21 @@
+// src/components/ui/use-toast.ts (si pas auto-généré)
+import * as React from 'react';
+
+type ToastProps = {
+  title?: string;
+  description?: string;
+  variant?: 'default' | 'destructive';
+};
+
+export function useToast() {
+  const [toasts, setToasts] = React.useState<ToastProps[]>([]);
+
+  const toast = (props: ToastProps) => {
+    setToasts((prev) => [...prev, props]);
+    setTimeout(() => {
+      setToasts((prev) => prev.slice(1));
+    }, 3000);
+  };
+
+  return { toast, toasts };
+}
